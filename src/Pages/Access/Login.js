@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-// import SocialLogin from './SocialMedia/SocialLogin';
+import SocialMedia from './SocialMedia';
 import { useForm } from "react-hook-form";
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -80,11 +80,11 @@ if (user) {
                 <div className='text-center'>
                     <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>Login</button>
                 </div>
-                    <p className='my-2 text-lg'>New To Doctor Portal? <span className='link text-primary'><Link to="/register">Please Register</Link></span></p>
+                    <p className='my-2 text-lg'>New To Doctor Portal? <span className='link text-primary'><Link to="/registation">Please Register</Link></span></p>
                 </form>
                   <div className="divider">OR</div>
 
-               {/* <SocialLogin /> */}
+               <SocialMedia />
             </div>
             </div>
         </div>
