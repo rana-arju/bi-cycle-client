@@ -39,7 +39,8 @@ const Navbar = () => {
             <div class="dropdown dropdown-end">
                 {
                     user ? <> 
-                    <div className='flex justify-center items-center'> <span className=' hidden sm:block pr-1 md:pr-3'>{user?.profileImg ? user?.userName : user.displayName}</span>
+                    <div className='flex justify-center items-center'>
+                        <span className=' hidden sm:block pr-1 md:pr-3'>{user?.profileImg ? user?.userName : user.displayName}</span>
                 <label tabindex="0" class="btn btn-ghost btn-circle avatar flex">
                     
                 <div class="w-10 rounded-full">
