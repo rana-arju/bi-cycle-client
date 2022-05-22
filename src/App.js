@@ -10,6 +10,7 @@ import RequireAuth from "./Shared/RequireAuth/RequireAuth";
 import Blog from "./Pages/Blog/Blog";
 import Profile from "./Deshboard/Profile/Profile";
 import Portfolio from "./Pages/Portfolio/Portfolio";
+import Update from "./Deshboard/Profile/Update";
 function App() {
   return (
     <div>
@@ -22,6 +23,7 @@ function App() {
           <Route path='/registation' element={<Registation />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/update" element={<Update />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       <Footer />

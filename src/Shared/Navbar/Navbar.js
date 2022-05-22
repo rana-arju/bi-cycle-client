@@ -38,26 +38,29 @@ const Navbar = () => {
             <div className="navbar-end">
             <div class="dropdown dropdown-end">
                 {
-                    user ? <>  <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                    user ? <> 
+                    <div className='flex justify-center items-center'> <span className=' hidden sm:block pr-1 md:pr-3'>{user?.profileImg ? user?.userName : user.displayName}</span>
+                <label tabindex="0" class="btn btn-ghost btn-circle avatar flex">
+                    
                 <div class="w-10 rounded-full">
                     {
                         user?.photoURL ? <img src={user?.photoURL} alt='...' /> : <img src="https://i.ibb.co/kG6vXJx/default-avatar-placeholder-profile-icon-male-vector.jpg" alt='...' />
                     }
                 
                 </div>
+               
             </label>
+            </div>
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                 <li>
                 <NavLink class="justify-between" to="/profile">Profile</NavLink>
                 </li>
                 <li><a onClick={logout}>Logout</a></li>
-            </ul></> :   <ul class="menu menu-horizontal p-0">
-                    <li><NavLink to="/login">Login</NavLink></li>
-                </ul>
-                }
-              
-
-          
+            </ul></> : 
+            <ul class="menu menu-horizontal p-0">
+                <li><NavLink to="/login">Login</NavLink></li>
+            </ul>
+             }
             </div>
             </div>
             </div>
