@@ -6,7 +6,7 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
-// import useToken from '../../hooks/useToken';
+import useToken from '../../hooks/useToken';
 
 const Registation = () => {
     const navigate = useNavigate();
@@ -20,7 +20,7 @@ const Registation = () => {
     error,
     ] = useCreateUserWithEmailAndPassword(auth);
 const { register, formState: { errors }, handleSubmit } = useForm();
-// const [token] = useToken(user);
+const [token] = useToken(user);
 let RegErrror;
 if (error || updateError) {
    RegErrror = <p className='text-red-500'>{error?.message || updateError?.message}</p>
@@ -28,7 +28,7 @@ if (error || updateError) {
   if (loading || updating) {
     return <div className='h-40 mt-10'>{<Loading />}</div>
   }
-  if (user) {
+  if (token) {
     navigate(from, { replace: true });
     return toast.success('Thank You! Registation Successful')
   }

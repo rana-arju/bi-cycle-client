@@ -6,14 +6,14 @@ import auth from '../../firebase.init';
 import {toast} from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
 import { useLocation, useNavigate } from 'react-router-dom';
-// import useToken from '../../../hooks/useToken';
+import useToken from '../../hooks/useToken';
 const SocialMedia = () => {
 const navigate = useNavigate();
 const location = useLocation();
 let from = location.state?.from?.pathname || "/";
 const [signInWithGoogle, Guser, Gloading, Gerror] = useSignInWithGoogle(auth);
 const [signInWithFacebook, Fuser, Floading, Ferror] =  useSignInWithFacebook(auth);
-// const [token] = useToken(Guser || Fuser);
+const [token] = useToken(Guser || Fuser);
   if (Guser || Fuser) {
     navigate(from, { replace: true });
     return toast.success('Thank You for Joining Us!')
@@ -23,7 +23,7 @@ let socialLoginError;
 if (Gerror || Ferror) {
       socialLoginError = ( Gerror?.message || Ferror?.message)
   }
-  if (Gloading || Floading) {
+  if (token) {
     return <Loading />
   }
   
