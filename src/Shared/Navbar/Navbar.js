@@ -14,6 +14,7 @@ const Navbar = () => {
         <li className='mx-2'><NavLink to="/">Home</NavLink></li>
         <li className='mx-2'><NavLink to="/blog">Blog</NavLink></li>
         <li className='mx-2'><NavLink to="/portfolio">Portfolio</NavLink></li>
+        <li className='mx-2'>{user && <NavLink to="/deshboard">Deshboard</NavLink>}</li>
         </>
     
     return (
@@ -36,11 +37,12 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-            <div class="dropdown dropdown-end">
+            <div class="dropdown dropdown-end flex">
+
                 {
                     user ? <> 
                     <div className='flex justify-center items-center'>
-                        <span className=' hidden sm:block pr-1 md:pr-3'>{user?.profileImg ? user?.userName : user.displayName}</span>
+                        <span className=' hidden md:block pr-1 md:pr-3'>{user?.profileImg ? user?.userName : user.displayName}</span>
                 <label tabindex="0" class="btn btn-ghost btn-circle avatar flex">
                     
                 <div class="w-10 rounded-full">
@@ -61,7 +63,13 @@ const Navbar = () => {
             <ul class="menu menu-horizontal p-0">
                 <li><NavLink to="/login">Login</NavLink></li>
             </ul>
+            
              }
+             {
+                 user && <label for="deshboard-sidebar" class="btn btn-ghost drawer-button lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg></label>
+             }
+            
+
             </div>
             </div>
             </div>

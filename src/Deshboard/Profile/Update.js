@@ -1,14 +1,11 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useForm } from "react-hook-form";
-import { NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Update = () => {
         const [user] = useAuthState(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
 
-    const onSubmit = async(event) => {
+    const handleSubmit = async(event) => {
     const email = event.email;
     const password = event.password;
    
@@ -58,7 +55,7 @@ const Update = () => {
                 </label>
                 </div>
                 <div className='text-center'>
-                    <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>Update Profile</button>
+                    <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>All Save</button>
                 </div>
                 </form>
                

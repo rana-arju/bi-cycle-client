@@ -11,6 +11,12 @@ import Blog from "./Pages/Blog/Blog";
 import Profile from "./Deshboard/Profile/Profile";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Update from "./Deshboard/Profile/Update";
+import Deshboard from "./Deshboard/Deshboard";
+import AddReview from "./Deshboard/AddReview/AddReview";
+import MyOrders from "./Deshboard/MyOrders/MyOrders";
+import MakeAdmin from "./Deshboard/MakeAdmin/MakeAdmin";
+import ManageProduct from "./Deshboard/ManageProduct/ManageProduct";
+import ManageOrders from "./Deshboard/ManageOrders/ManageOrders";
 function App() {
   return (
     <div>
@@ -22,8 +28,20 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/registation' element={<Registation />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/profile" element={<Profile />} />
           <Route path="/update" element={<Update />} />
+
+          <Route path="/deshboard" element={<RequireAuth>
+            <Deshboard />
+          </RequireAuth>
+          } >
+            <Route index element={<Profile />} />
+            <Route path="review" element={<AddReview />} />
+            <Route path="orders" element={<MyOrders />} />
+            <Route path="manageproduct" element={<ManageProduct />} />
+            <Route path="manageorders" element={<ManageOrders />} />
+            <Route path="makeadmin" element={<MakeAdmin />} />
+
+           </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
       <Footer />

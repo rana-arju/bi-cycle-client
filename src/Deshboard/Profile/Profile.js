@@ -1,6 +1,5 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useForm } from "react-hook-form";
 import { NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 
@@ -8,7 +7,7 @@ const Profile = () => {
         const [user] = useAuthState(auth);
     return (
           <div className='container flex h-full  justify-center items-center md:my-24'>
-            <div className="card w-full md:w-2/5 bg-base-100 shadow-xl">
+            <div className="card w-full md:w-3/5 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">My Profile</h2>
                 <div>
@@ -34,7 +33,7 @@ const Profile = () => {
                 </div>
                 
                 <div className='text-center'>
-                    <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>Update Profile</button>
+                    <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" ><NavLink to="/update">Update Profile</NavLink></button>
                 </div>
               
                
