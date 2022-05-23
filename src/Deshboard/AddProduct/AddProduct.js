@@ -8,7 +8,7 @@ const AddProduct = () => {
     }
     return (
     <div className='container flex h-full  justify-center items-center md:my-24'>
-            <div className="card w-full md:w-2/5 bg-base-100 shadow-xl">
+            <div className="card w-full md:w-10/12 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">Add New Product</h2>
                 <form onSubmit={handleProductAdd}>
@@ -42,7 +42,7 @@ const AddProduct = () => {
                 </label>
                 </div>
                  <div>
-                    <textarea class="textarea textarea-bordered w-full  block mb-5" placeholder="Bio"></textarea>
+                    <textarea class="textarea textarea-bordered w-full  block mb-5 h-32" placeholder="Product Description..."></textarea>
                 </div>
                 <div className='text-center'>
                     <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>Add Product</button>

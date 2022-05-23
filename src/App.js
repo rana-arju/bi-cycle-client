@@ -19,6 +19,8 @@ import ManageProduct from "./Deshboard/ManageProduct/ManageProduct";
 import ManageOrders from "./Deshboard/ManageOrders/ManageOrders";
 import Purchase from "./Shared/Purchase/Purchase";
 import AddProduct from "./Deshboard/AddProduct/AddProduct";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer} from 'react-toastify';
 function App() {
   return (
     <div>
@@ -31,8 +33,9 @@ function App() {
           <Route path='/registation' element={<Registation />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/update" element={<Update />} />
-          <Route path="/purchase/:id" element={
+          <Route path="/purchase/:id" element={<RequireAuth>
             <Purchase />
+          </RequireAuth>
           } /> 
           <Route path="/deshboard" element={<RequireAuth>
             <Deshboard />
@@ -49,6 +52,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       <Footer />
+       <ToastContainer />
     </div>
   );
 }

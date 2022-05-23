@@ -55,9 +55,7 @@ const Navbar = () => {
             </label>
             </div>
             <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                <li>
-                <NavLink class="justify-between" to="/profile">Profile</NavLink>
-                </li>
+              
                 <li><a onClick={logout}>Logout</a></li>
             </ul></> : 
             <ul class="menu menu-horizontal p-0">
