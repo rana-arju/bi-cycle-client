@@ -18,7 +18,7 @@ const Registation = () => {
     user,
     loading,
     error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
 const { register, formState: { errors }, handleSubmit } = useForm();
 const [token] = useToken(user);
 let RegErrror;
@@ -37,6 +37,7 @@ const onSubmit = async(event) => {
     const password = event.password;
     await createUserWithEmailAndPassword(email, password);
     await updateProfile({ displayName: event.fullName});
+    toast.success('Verify Your Eamil');
 
 };
     return (
