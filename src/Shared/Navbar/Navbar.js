@@ -29,7 +29,7 @@ const Navbar = () => {
                    {menu}
                 </ul>
                 </div>
-                <a class="btn btn-ghost  text-2xl uppercase">Bicycle</a>
+                <a class="btn btn-ghost text-lg sm:text-xl md:text-2xl uppercase">Bicycle</a>
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0">
