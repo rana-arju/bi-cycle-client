@@ -17,6 +17,8 @@ import MyOrders from "./Deshboard/MyOrders/MyOrders";
 import MakeAdmin from "./Deshboard/MakeAdmin/MakeAdmin";
 import ManageProduct from "./Deshboard/ManageProduct/ManageProduct";
 import ManageOrders from "./Deshboard/ManageOrders/ManageOrders";
+import Purchase from "./Shared/Purchase/Purchase";
+import AddProduct from "./Deshboard/AddProduct/AddProduct";
 function App() {
   return (
     <div>
@@ -29,7 +31,9 @@ function App() {
           <Route path='/registation' element={<Registation />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/update" element={<Update />} />
-
+          <Route path="/purchase/:id" element={
+            <Purchase />
+          } /> 
           <Route path="/deshboard" element={<RequireAuth>
             <Deshboard />
           </RequireAuth>
@@ -40,7 +44,7 @@ function App() {
             <Route path="manageproduct" element={<ManageProduct />} />
             <Route path="manageorders" element={<ManageOrders />} />
             <Route path="makeadmin" element={<MakeAdmin />} />
-
+            <Route path="addproduct" element={<AddProduct />} />
            </Route>
           <Route path='*' element={<NotFound />} />
         </Routes>
