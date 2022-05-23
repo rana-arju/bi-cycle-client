@@ -19,8 +19,13 @@ const Deshboard = () => {
             <label for="deshboard-sidebar" class="drawer-overlay"></label> 
             <ul class="menu p-4 overflow-y-auto w-full sm:w-10/12 md:w-80 bg-base-200 rounded text-base-content">
             <li className='mb-1'><NavLink to='/deshboard'>My Profile</NavLink></li>
+            {
+                admin ? ' ': <>
             <li className='mb-1'><NavLink to='orders'>My Orders</NavLink></li>
             <li className='mb-1'><NavLink to='review'>Add Review</NavLink></li>
+                </>
+            }
+           
             {admin && <>
             <li className='mb-1'><NavLink to='addproduct'>Add Product</NavLink></li>
             <li className='mb-1'><NavLink to='manageorders'>Manage Orders</NavLink></li>
