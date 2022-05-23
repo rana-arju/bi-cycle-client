@@ -1,7 +1,12 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
+import  useAdmin from '../hooks/useAdmin.js';
+import auth from '../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const Deshboard = () => {
+    const [user] = useAuthState(auth);
+    const [admin] = useAdmin(user);
     return (
         <div class="drawer drawer-mobile">
         <input id="deshboard-sidebar" type="checkbox" class="drawer-toggle" />
@@ -16,10 +21,13 @@ const Deshboard = () => {
             <li className='mb-1'><NavLink to='/deshboard'>My Profile</NavLink></li>
             <li className='mb-1'><NavLink to='orders'>My Orders</NavLink></li>
             <li className='mb-1'><NavLink to='review'>Add Review</NavLink></li>
+            {admin && <>
             <li className='mb-1'><NavLink to='addproduct'>Add Product</NavLink></li>
             <li className='mb-1'><NavLink to='manageorders'>Manage Orders</NavLink></li>
             <li className='mb-1'><NavLink to='manageproduct'>Manage Product</NavLink></li>
             <li className='mb-1'><NavLink to='makeadmin'>Make Admin</NavLink></li>
+            </>
+            }
             </ul>
         
         </div>
