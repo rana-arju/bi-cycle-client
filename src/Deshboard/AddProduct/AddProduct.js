@@ -4,7 +4,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 const AddProduct = () => {
-    const { register, formState: { errors }, handleSubmit, reset } = useForm();
+    const { register, formState: { errors }, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
     const imgStorageKey = '58d3c7355cf533547f2645e98915da5c';
 

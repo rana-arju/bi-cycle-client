@@ -33,7 +33,7 @@ const Profile = () => {
                 </div>
                 
                 <div className='text-center'>
-                    <NavLink to="/update"><button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" >Update Profile</button></NavLink>
+                    <NavLink to="update"><button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" >Update Profile</button></NavLink>
                 </div>
               
                
