@@ -19,33 +19,33 @@ const Navbar = () => {
     
     return (
         <div className=' bg-base-200 '>
-           <div class="navbar container mx-auto">
-            <div class="navbar-start">
-                <div class="dropdown">
-                <label tabindex="0" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+           <div className="navbar container mx-auto">
+            <div className="navbar-start">
+                <div className="dropdown">
+                <label tabIndex="0" className="btn btn-ghost lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </label>
-                <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                    {menu}
                 </ul>
                 </div>
-                <a class="btn btn-ghost text-lg sm:text-xl md:text-2xl uppercase">Bicycle</a>
+                <a className="btn btn-ghost text-lg sm:text-xl md:text-2xl uppercase">Bicycle</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal p-0">
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal p-0">
                 {menu}
                 </ul>
             </div>
             <div className="navbar-end">
-            <div class="dropdown dropdown-end flex">
+            <div className="dropdown dropdown-end flex">
 
                 {
                     user ? <> 
                     <div className='flex justify-center items-center'>
                         <span className=' hidden md:block pr-1 md:pr-3'>{user?.profileImg ? user?.userName : user.displayName}</span>
-                <label tabindex="0" class="btn btn-ghost btn-circle avatar flex">
+                <label tabIndex="0" className="btn btn-ghost btn-circle avatar flex">
                     
-                <div class="w-10 rounded-full">
+                <div className="w-10 rounded-full">
                     {
                         user?.photoURL ? <img src={user?.photoURL} alt='...' /> : <img src="https://i.ibb.co/kG6vXJx/default-avatar-placeholder-profile-icon-male-vector.jpg" alt='...' />
                     }
@@ -54,17 +54,17 @@ const Navbar = () => {
                
             </label>
             </div>
-            <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
               
                 <li><a onClick={logout}>Logout</a></li>
             </ul></> : 
-            <ul class="menu menu-horizontal p-0">
+            <ul className="menu menu-horizontal p-0">
                 <li><NavLink to="/login">Login</NavLink></li>
             </ul>
             
              }
              {
-                 user && <label for="deshboard-sidebar" class="btn btn-ghost drawer-button lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg></label>
+                 user && <label for="deshboard-sidebar" className="btn btn-ghost drawer-button lg:hidden"><svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg></label>
              }
             
 

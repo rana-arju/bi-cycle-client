@@ -86,20 +86,20 @@ const AddProduct = () => {
                 <div className='flex items-center space-x-6 my-5'>
                 
 
-                <div class="shrink-0">
-                    <img class="object-cover w-16 h-16 rounded-full"
+                <div className="shrink-0">
+                    <img className="object-cover w-16 h-16 rounded-full"
                     src="https://i.ibb.co/kG6vXJx/default-avatar-placeholder-profile-icon-male-vector.jpg" alt="..." />
                 </div>
-                <label class="block ">
-                    <span class="sr-only cursor-pointer ">Product Image</span>
+                <label className="block ">
+                    <span className="sr-only cursor-pointer ">Product Image</span>
                     <input type="file" name='image'
-                    class="block cursor-pointer w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"  {...register("image", { required: true })} />
+                    className="block cursor-pointer w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"  {...register("image", { required: true })} />
                 </label>
                 </div>
                  <div>
                     <p className='mb-3 text-red-500'> {errors.description?.type === 'required' && "Description is required*"}</p>
 
-                    <textarea name='description' class="textarea textarea-bordered w-full  block mb-5 h-32" placeholder="Product Description..." {...register("description", { required: true })} ></textarea>
+                    <textarea name='description' className="textarea textarea-bordered w-full  block mb-5 h-32" placeholder="Product Description..." {...register("description", { required: true })} ></textarea>
                 </div>
                 <div className='text-center'>
                     <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>Add Product</button>

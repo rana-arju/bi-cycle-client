@@ -8,16 +8,16 @@ const Deshboard = () => {
     const [user] = useAuthState(auth);
     const [admin] = useAdmin(user);
     return (
-        <div class="drawer drawer-mobile">
-        <input id="deshboard-sidebar" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content flex flex-col">
+        <div className="drawer drawer-mobile">
+        <input id="deshboard-sidebar" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col">
             <h2 className="text-center text-4xl my-3">Deshboard</h2>
             <Outlet />
         
         </div> 
-        <div class="drawer-side mr-3">
-            <label for="deshboard-sidebar" class="drawer-overlay"></label> 
-            <ul class="menu p-4 overflow-y-auto w-full sm:w-10/12 md:w-80 bg-base-200 rounded text-base-content">
+        <div className="drawer-side mr-3">
+            <label for="deshboard-sidebar" className="drawer-overlay"></label> 
+            <ul className="menu p-4 overflow-y-auto w-full sm:w-10/12 md:w-80 bg-base-200 rounded text-base-content">
             <li className='mb-1'><NavLink to='/deshboard'>My Profile</NavLink></li>
             {
                 admin ? ' ': <>
