@@ -5,7 +5,7 @@ import Loading from '../../Shared/Loading/Loading';
 import User from './User';
 
 const MakeAdmin = () => {
-    const { isLoading, error, data: users, refetch} = useQuery('users', () =>
+    const { isLoading, error, data:users, refetch} = useQuery('users', () =>
      fetch(`http://localhost:5000/user`, {
          method: "GET",
           headers: {
