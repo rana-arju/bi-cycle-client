@@ -6,7 +6,7 @@ import auth from '../../firebase.init';
 const Hero = () => {
     const [user] = useAuthState(auth);
     return (
-        <div className="hero h-[350px] md:h-[550px] w-full" style={{backgroundImage: `url(https://i.ibb.co/6RMg2J8/pexels-tony-990113-1.jpg)`,backgroundSize: "cover", backgroundPosition: "center center"}}>
+        <div className="hero h-[350px] md:h-[550px] w-full" style={{backgroundImage: `url(https://i.ibb.co/LrTSSGw/pexels-tony-990113-2.jpg)`,backgroundSize: "cover", backgroundPosition: "center center"}}>
         <div className=" container mx-auto ">
             
             <div className='w-full px-3 md:w-3/5 text-white'>

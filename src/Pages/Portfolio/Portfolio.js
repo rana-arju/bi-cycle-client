@@ -132,6 +132,59 @@ const Portfolio = () => {
                 </div>
             
             </div>
+            <div>
+                <h2 className="text-xl sm:text-2xl md:text-4xl uppercase text-center text-secondary my-10">My recent Project</h2>
+                <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://i.ibb.co/1fVqpSn/logika-full-view-1-1.png" className='h-full w-[400px]' alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Logisco</h2>
+                         <div class="card-actions justify-end">
+                            <div class="badge badge-outline">react js</div> 
+                            <div class="badge badge-outline">mongodb</div> 
+                            <div class="badge badge-outline">expressjs</div>
+                            <div class="badge badge-outline">bootstrap</div>
+                            <div class="badge badge-outline">html,css</div>
+                            </div>
+                            <div class="card-actions justify-end">
+                        <a href='https://logica-f4803.web.app/'><button class="btn btn-primary btn-block">Live Preview </button></a>
+                        </div>
+                    </div>
+                    </div>
+                    {/* project 2 */}
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://i.ibb.co/7yDmsHS/business-1-1.png" className='h-full w-[400px]' alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Business one page</h2>
+                         <div class="card-actions justify-end">
+                            
+                            <div class="badge badge-outline">jQuery</div>
+                            <div class="badge badge-outline">bootstrap</div>
+                            <div class="badge badge-outline">html,css</div>
+                            </div>
+                            <div class="card-actions justify-end">
+                        <a href='https://rana-arju.github.io/one-page-website/'><button class="btn btn-primary btn-block">Live Preview </button></a>
+                        </div>
+                    </div>
+                    </div>
+                    {/* project 3 */}
+                    <div class="card card-compact w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://i.ibb.co/J3TCQkw/screencapture-rana-arju-github-io-css-ecommerces-2022-05-25-15-58-59-1-1-1.png" className='h-full w-[400px]' alt="Shoes" /></figure>
+                    <div class="card-body">
+                        <h2 class="card-title">Business one page</h2>
+                         <div class="card-actions justify-end">
+                            
+                            <div class="badge badge-outline">jQuery</div>
+                            <div class="badge badge-outline">bootstrap</div>
+                            <div class="badge badge-outline">html,css</div>
+                            </div>
+                            <div class="card-actions justify-end">
+                        <a href='https://rana-arju.github.io/css-ecommerces/'><button class="btn btn-primary btn-block">Live Preview </button></a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
             </div>
       
     );
