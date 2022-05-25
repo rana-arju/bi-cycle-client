@@ -10,7 +10,7 @@ const Reviws = () => {
     return (
         <div className='container px-2 my-10 mx-auto'>
              <h2 className='uppercase text-center text-xl sm:text-2xl md:text-4xl my-5'>All Reviews</h2>
-        <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {
                 reviews.map(review => <div key={review._id} class="card w-full bg-base-100 shadow-xl">
                 <div class="card-body">
