@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Bi-Cycle -
+## Live Preview 1: https://bicycle-2a227.web.app/
+## Live Preview 2: https://bicycle-2a227.firebaseapp.com/
+<!-- ![Logika full Vew Image](https://i.ibb.co/K9c8Tn6/logika-full-view.png) -->
+# Uses Technology - MERN STACK PROJECT
+- Mongodb - as a database language whare we store our data
+- express js - as a server language express js help clint site connect to database and transform data
+- firebase - we use for login and registation in our website and we live our website help of firebase
+- React Js - is a most usefull fronded language react js use for fronded development
+- Tailwind css - is a css library we use for easy for our work
+- Daisy UI - is a tailwind css Component
+- React Router -use for route for routing page without page reload
+- React Toasty - use for notify successfull and error message
+- React firebase hooks - it help us working with firebase
+- CSS - is a stylesheet language use for our site style
+- JSX - jsx mean javascript xml
+- React icons - use for social media icon set
+# File Sturucture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [x] /src
+    - [x] /Deshboard
+        - [x] /AddProduct
+        - [x] /AddReview
+        - [x] /MakeAdmin
+        - [x] /ManageOrder
+        - [x] /ManageProduct
+        - [x] /MyOrders
+        - [x] /Profile
+        - [x] /Deshboard.js
+    - [x] /hooks
+        - [x] /useAdmin
+        - [x] /useToken
+    - [x] /Pages
+      - [x] /Access
+      - [x] /AddProduct
+      - [x] /Blog
+      - [x] /Home
+      - [x] /NotFound
+    - [x] /Shared
+        - [x] /BookNow
+        - [x] /Footer
+        - [x] /Loading
+        - [x] /Navbar
+    - [x] index.js
+    - [x]  App.js
+# Here Create
+- One Home page with header, banner,  About Business,six product, Couter Section, Blogs, and footer section
+- one blog page whare Five quetion and answers show
+- most import part of login page whare we can login google and email, password
+- and register page whare registation with name. email, passwoed
+- Deshboard menu whare user see neccessary navlink
+- Not Found page we can see 404 page
