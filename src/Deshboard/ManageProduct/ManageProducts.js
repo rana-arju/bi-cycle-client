@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
      //All Produts Show
       const { isLoading, error, data:products, refetch} = useQuery('products', () =>
-     fetch(`http://localhost:5000/products`, {
+     fetch(`https://arcane-inlet-91838.herokuapp.com/products`, {
          method: "GET",
           headers: {
 
