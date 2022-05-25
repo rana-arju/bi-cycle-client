@@ -36,7 +36,7 @@ const Update = () => {
                     github: data.github
                 }
                 //send fata on database
-                fetch(`http://localhost:5000/user/${email}`, {
+                fetch(`https://arcane-inlet-91838.herokuapp.com/user/${email}`, {
                     method: "PUT",
                     headers: {
                     'content-type': "application/json",

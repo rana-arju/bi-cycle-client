@@ -5,9 +5,9 @@ const useAdmin = user => {
     const [adminLoading, setAdminLoading] = useState(true);
 
     useEffect(() => {
-        const email = user.email;
+        const email = user?.email;
         if (email) {
-            fetch(`http://localhost:5000/admin/${email}`,{
+            fetch(`https://arcane-inlet-91838.herokuapp.com/admin/${email}`,{
                 methodd: "GET",
                 headers: {
                     'content-type': 'application/json',
@@ -22,7 +22,7 @@ const useAdmin = user => {
                 setAdminLoading(false);
             })
         }
-    },[user]);
+    },[admin]);
     return [admin, adminLoading];
 }
 export default useAdmin;
