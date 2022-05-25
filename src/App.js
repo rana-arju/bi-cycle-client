@@ -15,13 +15,13 @@ import Deshboard from "./Deshboard/Deshboard";
 import AddReview from "./Deshboard/AddReview/AddReview";
 import MyOrders from "./Deshboard/MyOrders/MyOrders";
 import MakeAdmin from "./Deshboard/MakeAdmin/MakeAdmin";
-import ManageProduct from "./Deshboard/ManageProduct/ManageProduct";
 import ManageOrders from "./Deshboard/ManageOrders/ManageOrders";
 import Purchase from "./Shared/Purchase/Purchase";
 import AddProduct from "./Deshboard/AddProduct/AddProduct";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer} from 'react-toastify';
 import RequireAdmin from "./Shared/RequireAdmin/RequireAdmin";
+import ManageProducts from "./Deshboard/ManageProduct/ManageProducts";
 function App() {
   return (
     <div>
@@ -46,7 +46,7 @@ function App() {
             <Route path="update" element={<Update />} />
             <Route path="review" element={<AddReview />} />
             <Route path="orders" element={<MyOrders />} />
-            <Route path="manageproduct" element={<ManageProduct />} />
+            <Route path="manageproduct" element={<ManageProducts />} />
             <Route path="manageorders" element={<ManageOrders />} />
             <Route path="makeadmin" element={<RequireAdmin>
                 <MakeAdmin />

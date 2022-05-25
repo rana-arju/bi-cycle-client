@@ -20,30 +20,30 @@ const BusinessStatus = () => {
         </div>
         <div class="stats shadow">
         <div class="stat">
-        <div class="stat-figure text-secondary">
+        <div class="stat-figure text-primary">
            <BsGraphUp class="inline-block w-8 h-8 stroke-current" />
         </div>
         <div class="stat-title">Annual revenue</div>
-            <div class="stat-value text-secondary">5.6 M</div>
+            <div class="stat-value text-primary">5.6 M</div>
             <div class="stat-desc">5% More Than Last Year</div>
         </div>
         </div>
         <div class="stats shadow">
         <div class="stat">
-        <div class="stat-figure text-secondary">
+        <div class="stat-figure text-primary">
             <BsTools class="inline-block w-8 h-8 stroke-current" />
         </div>
         <div class="stat-title">Total Parts</div>
-            <div class="stat-value text-secondary">100+</div>
+            <div class="stat-value text-primary">100+</div>
         </div>
         </div>
         <div class="stats shadow">
         <div class="stat">
-        <div class="stat-figure text-secondary">
+        <div class="stat-figure text-primary">
             <FaComments class="inline-block w-8 h-8 stroke-current" />
         </div>
         <div class="stat-title">Reviews</div>
-            <div class="stat-value text-secondary">20 Lakh +</div>
+            <div class="stat-value text-primary">20 Lakh +</div>
         </div>
        </div>
        </div>
