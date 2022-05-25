@@ -9,7 +9,7 @@ const Product = ({product}) => {
         navigate(path);
     }
     return (
-        <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <div className="card card-compact w-full bg-base-100 shadow-xl">
          <figure><img src={images} alt={name} className="h-[300px] w-full" /></figure>
         <div className="card-body">
             <h2 className="card-title text-secondary">Price: $ {price}</h2>

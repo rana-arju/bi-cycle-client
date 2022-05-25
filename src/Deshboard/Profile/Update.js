@@ -22,6 +22,7 @@ const Update = () => {
         .then(result => {
             if (result.success) {
                 const img = result?.data?.url;
+                console.log(img);
                 const user = {
                     name: name,
                     email: email,

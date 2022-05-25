@@ -19,7 +19,8 @@ const Profile = () => {
             .then(data => {
                 setUser(data)
             })
-        },[]);
+        },[user]);
+        console.log(users);
     return (
           <div className='container flex h-full  justify-center items-center md:my-24'>
             <div className="card w-full md:w-3/5 bg-base-100 shadow-xl">

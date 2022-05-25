@@ -10,10 +10,14 @@ const Products = () => {
         .then(data => setproduct(data))
     },[]);
     return (
-        <div className='container mx-auto grid grid-1 md:grid-2 lg:grid-cols-3 gap-4'>
+        <div className='container px-2 mx-auto'>
+             <h2 className='uppercase text-center text-xl sm:text-2xl md:text-4xl my-5'>New Products</h2>
+        <div className=' grid grid-1 md:grid-2 lg:grid-cols-3 gap-4'>
+           
             {
                 products.map(product => <Product key={product._id} product ={product} />)
             }
+        </div>
         </div>
     );
 };

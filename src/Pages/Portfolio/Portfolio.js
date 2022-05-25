@@ -146,8 +146,8 @@ const Portfolio = () => {
                             <div class="badge badge-outline">bootstrap</div>
                             <div class="badge badge-outline">html,css</div>
                             </div>
-                            <div class="card-actions justify-end">
-                        <a href='https://logica-f4803.web.app/'><button class="btn btn-primary btn-block">Live Preview </button></a>
+                            <div class="card-actions justify-center mt-5">
+                        <a href='https://logica-f4803.web.app/'><button class="btn btn-primary">Live Preview </button></a>
                         </div>
                     </div>
                     </div>
@@ -162,8 +162,8 @@ const Portfolio = () => {
                             <div class="badge badge-outline">bootstrap</div>
                             <div class="badge badge-outline">html,css</div>
                             </div>
-                            <div class="card-actions justify-end">
-                        <a href='https://rana-arju.github.io/one-page-website/'><button class="btn btn-primary btn-block">Live Preview </button></a>
+                            <div class="card-actions justify-center mt-5">
+                        <a href='https://rana-arju.github.io/one-page-website/'><button class="btn btn-primary">Live Preview </button></a>
                         </div>
                     </div>
                     </div>
@@ -178,8 +178,8 @@ const Portfolio = () => {
                             <div class="badge badge-outline">bootstrap</div>
                             <div class="badge badge-outline">html,css</div>
                             </div>
-                            <div class="card-actions justify-end">
-                        <a href='https://rana-arju.github.io/css-ecommerces/'><button class="btn btn-primary btn-block">Live Preview </button></a>
+                            <div class="card-actions justify-center mt-5">
+                        <a href='https://rana-arju.github.io/css-ecommerces/'><button class="btn btn-primary">Live Preview </button></a>
                         </div>
                     </div>
                     </div>
