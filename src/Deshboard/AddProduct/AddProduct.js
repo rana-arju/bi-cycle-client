@@ -34,13 +34,11 @@ const AddProduct = () => {
                     minorder: data.minorder,
                     price: data.price
                 }
-                //send fata on database
-                fetch('https://arcane-inlet-91838.herokuapp.com/products', {
+                //send new product on database
+                fetch('http://localhost:5000/products', {
                     method: "POST",
                     headers: {
                     'content-type': "application/json",
-                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-
                     },
                     body: JSON.stringify(product)
                 })

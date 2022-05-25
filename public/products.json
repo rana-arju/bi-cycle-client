@@ -1,22 +1,4 @@
 [
-    {
-        "name":"The best is yet to come' Framed poster",
-        "description":"There are many variations of passages of Framed poster available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. ",
-        "price": 31990,
-        "stock":0,
-        "images":"https://i.ibb.co/gRbDPwt/5.jpg",
-        "sellar":"Rana Arju",
-        "minorder": 20,
-        "email":"arjurana530@gmail.com"
-    },
-    {
-        "name":"Mug Today is a good day",
-        "description":"There are many variations of passages of Mugavailable, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
-        "price": 21990,
-        "stock":120,
-        "images":"https://i.ibb.co/vVxNsgZ/10.jpg",
-        "sellar":"Rana Arju",
-        "minorder": 80,
-        "email":"arjurana530@gmail.com"
-    }
+    {"review": "hello", "name": "", "rating": 5}
+    
 ]
