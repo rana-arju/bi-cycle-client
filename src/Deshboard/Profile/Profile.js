@@ -28,7 +28,7 @@ const Profile = () => {
                 <div>
                 <label tabIndex="0" className=" btn-circle avatar flex">
                 <div className="w-24 rounded-full">
-                   <img src={user?.image} alt='...' />
+                   <img src={users?.image} alt='...' />
                  
                 </div>
             </label>
