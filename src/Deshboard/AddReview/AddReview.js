@@ -17,7 +17,7 @@ const AddReviws = () => {
             name:name
         }
         //add new review on database
-                fetch('http://localhost:5000/review', {
+                fetch('https://arcane-inlet-91838.herokuapp.com/review', {
                     method: "POST",
                     headers: {
                     'content-type': "application/json",
@@ -45,7 +45,7 @@ const AddReviws = () => {
                 <div>
                  <p className='mb-3 text-red-500'> {errors.ratting?.type === 'required' && "ratting is required*"}</p>
 
-                <select class="select select-bordered w-full block mb-5" {...register("ratting", { required: true })}>
+                <select className="select select-bordered w-full block mb-5" {...register("ratting", { required: true })}>
                     <option disabled selected>5</option>
                     <option>1</option>
                     <option>2</option>

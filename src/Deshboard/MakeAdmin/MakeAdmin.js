@@ -6,7 +6,7 @@ import User from './User';
 
 const MakeAdmin = () => {
     const { isLoading, error, data:users, refetch} = useQuery('users', () =>
-     fetch(`http://localhost:5000/user`, {
+     fetch(`https://arcane-inlet-91838.herokuapp.com/user`, {
          method: "GET",
           headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -36,7 +36,7 @@ const MakeAdmin = () => {
                 </thead>
                 <tbody>
                     {
-                    users.map(user => <User user= {user}  key={user._id} refetch={refetch} />)
+                    users.map((user, index) => <User user= {user}  key={user._id} refetch={refetch} index={index} />)
                     }
                 </tbody>
             </table>

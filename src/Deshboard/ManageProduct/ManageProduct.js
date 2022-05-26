@@ -16,7 +16,7 @@ const ManageProduct = ({product, refetch, setDeletingProduct}) => {
             </div>
             
             <div className="card-actions justify-end">
-            <label onClick={() => setDeletingProduct(product)} for="handleDelete" class="btn btn-error text-white btn-block">Delete</label>
+            <label onClick={() => setDeletingProduct(product)} htmlFor="handleDelete" className="btn btn-error text-white btn-block">Delete</label>
 
             </div>
         </div>

@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
+import Loading from '../Loading/Loading';
 const Purchase = () => {
     const { register, formState: { errors }, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
@@ -13,7 +14,7 @@ const Purchase = () => {
 
     useEffect(() =>{
         setTimeout(async() => {
-            const res = await fetch(`http://localhost:5000/products/${id}`);
+            const res = await fetch(`https://arcane-inlet-91838.herokuapp.com/products/${id}`);
             const data = await res.json();
             setProduct(data);
         },2000);
@@ -35,7 +36,7 @@ const Purchase = () => {
             email:email,
             name:name
         }
-           fetch('http://localhost:5000/order',{
+           fetch('https://arcane-inlet-91838.herokuapp.com/order',{
             method: "POST",
             headers: {
                 'content-type' : 'application/json',
@@ -54,7 +55,7 @@ const Purchase = () => {
         <div>
             {
                 products && <div className='container mx-auto md:w-10/12 my-10'>
-                <div class="card lg:card-side bg-base-100 shadow-xl">
+                <div className="card lg:card-side bg-base-100 shadow-xl">
                 <div className="card card-compact md:w-2/5 bg-base-100 shadow-xl">
                     <figure><img src={products.images} alt={products.name} className="h-[300px] w-full" /></figure>
                     <div className="card-body">
@@ -69,7 +70,7 @@ const Purchase = () => {
                   
                     </div>
                     </div>
-                <div class="card-body">
+                <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">Buyer Details</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
@@ -89,7 +90,8 @@ const Purchase = () => {
                     <div>
                         <p className='mb-3 text-red-500'> {errors.quentity?.type === 'required' && "Quentity is required*"}</p>
                         <p className='mb-3 text-red-500'> {errors.quentity?.type === 'min' && "Enter Minimum Quentity or greater Then*"}</p>
-                        <input type="number" placeholder={"Minimum Order " + products.minorder} className="input input-bordered w-full  block mb-5 " {...register("quentity", { required: true, min: products.minorder})} ></input>
+                        <p className='mb-3 text-red-500'> {errors.quentity?.type === 'max' && "Enter max Quentity or less Then*"}</p>
+                        <input type="number" placeholder={"Minimum Order " + products.minorder} className="input input-bordered w-full  block mb-5 " {...register("quentity", { required: true, min: products.minorder, max: products.stock})} ></input>
                     </div>
                     <div className='text-center'>
                         <button className="btn btn-block btn-primary bg-gradient-to-r from-primary to-secondary text-white" type='submit'>Place Order</button>
@@ -99,6 +101,7 @@ const Purchase = () => {
                 </div>
             </div>
             }
+            {!products && <Loading />}
             
         </div>
     )

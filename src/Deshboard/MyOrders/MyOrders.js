@@ -4,57 +4,61 @@ import auth from '../../firebase.init';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth);
+        //All Produts Show
     const [orders, setOrder] = useState([]);
     useEffect(() => {
         if (user) {
-        fetch(`http://localhost:5000/order/${user.email}`, {
+        fetch(`https://arcane-inlet-91838.herokuapp.com/order/${user.email}`, {
           method: "GET",
           headers: {
             'content-type': 'application/json',
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
           },
-        })
+        }
+        )
         .then(res => res.json())
-        .then(data => {
-          setOrder(data)
-        })
+        .then(data => console.log(data))
         }
 
     },[user])
+   
     return (
         <div>
             <h2 className='text-center text-xl  md:text-3xl uppercase text-primary font-bold mb-5'>my orders</h2>
-            <div class="overflow-x-auto w-full">
-            <table class="table w-full">
+            <div className="overflow-x-auto w-full">
+            <table className="table w-full">
                 <thead>
                 <tr>
                     <th>Product Img</th>
                     <th>Product Name</th>
                     <th>Price</th>
-                    <th>Action</th>
-                    <th></th>
+                    <th>Paid</th>
+                    <th>Cencle</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  
-                    <td>
-                    <div class="flex items-center space-x-3">
-                        <div class="avatar">
-                        <div class="rounded-lg w-24 h-24">
-                            <img src={orders.productImg} alt={orders.productName} />
+                   
+                        <tr>
+
+                        <td>
+                        <div className="flex items-center space-x-3">
+                            <div className="avatar">
+                            <div className="rounded-lg w-24 h-24">
+                                <img src={orders.productImg} alt={orders.productName} />
+                            </div>
+                            </div>
                         </div>
-                        </div>
-                    </div>
-                    </td>
-                    <td>
-                        {orders.productName}
-                    </td>
-                    <td>$ {orders.productPrice}</td>
-                    <th>
-                    <button class="btn btn-ghost btn-xs">details</button>
-                    </th>
-                </tr>
+                        </td>
+                        <td>
+                            {orders.productName}
+                        </td>
+                        <td>$ {orders.productPrice}</td>
+                        <th>
+                        <button className="btn btn-ghost btn-xs">details</button>
+                        </th>
+                    </tr>
+                ) 
+                   
+               
     
                 </tbody>
             </table>

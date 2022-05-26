@@ -16,7 +16,7 @@ const Deshboard = () => {
         
         </div> 
         <div className="drawer-side mr-3">
-            <label for="deshboard-sidebar" className="drawer-overlay"></label> 
+            <label htmlFor="deshboard-sidebar" className="drawer-overlay"></label> 
             <ul className="menu p-4 overflow-y-auto w-full sm:w-10/12 md:w-80 bg-base-200 rounded text-base-content">
             <li className='mb-1'><NavLink to='/deshboard'>My Profile</NavLink></li>
             {

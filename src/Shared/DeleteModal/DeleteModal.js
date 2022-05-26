@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteModal = ({deletingProduct, refetch, setDeletingProduct}) => {
     const {name, _id:id} = deletingProduct;
        const handleDelete = () => {
-       fetch(`http://localhost:5000/products/${id}`, {
+       fetch(`https://arcane-inlet-91838.herokuapp.com/products/${id}`, {
            method: "DELETE", 
            headers: {
            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -23,15 +23,15 @@ const DeleteModal = ({deletingProduct, refetch, setDeletingProduct}) => {
     return (
         <div>
 
-            <input type="checkbox" id="handleDelete" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-            <div class="modal-box">
-                <h3 class="font-bold text-lg">Are You Sure?</h3>
-                <p class="py-4 text-red-500">You Want To Delete {name}</p>
-                <div class="modal-action">
+            <input type="checkbox" id="handleDelete" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box">
+                <h3 className="font-bold text-lg">Are You Sure?</h3>
+                <p className="py-4 text-red-500">You Want To Delete {name}</p>
+                <div className="modal-action">
                 <button className="btn btn-error text-white " onClick={() => handleDelete()}>Delete</button>
 
-                <label for="handleDelete" class="btn">Cencle</label>
+                <label htmlFor="handleDelete" className="btn">Cencle</label>
                 </div>
             </div>
             </div>
