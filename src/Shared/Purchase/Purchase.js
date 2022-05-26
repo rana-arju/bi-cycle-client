@@ -10,7 +10,6 @@ const Purchase = () => {
     let {id} = useParams();
     // find specipic product by id
    const [products, setProduct] = useState(null);
- 
 
     useEffect(() =>{
         setTimeout(async() => {
@@ -23,16 +22,31 @@ const Purchase = () => {
     const onSubmit = data => {
         const email = user?.email;
         const name= user?.displayName;
-        const reviews = {
+        const order = {
+            productId: products._id,
+            productName: products.name,
+            productPrice: products.price,
+            productDescription: products.description,
             phone:data?.phone,
             address:data?.address,
+            quentity:data?.quentity,
             email:email,
             name:name
         }
+           fetch('http://localhost:5000/order',{
+            method: "POST",
+            headers: {
+                'content-type' : 'application/json',
+                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(data => {
+           toast.success(`Successfully order one Product!`);
+        })
     }
-
- 
-
 
     return (
         <div>
