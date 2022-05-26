@@ -23,7 +23,9 @@ const Purchase = () => {
         const email = user?.email;
         const name= user?.displayName;
         const order = {
+            paid: false,
             productId: products._id,
+            productImg: products.images,
             productName: products.name,
             productPrice: products.price,
             productDescription: products.description,
