@@ -17,7 +17,7 @@ const AddReviws = () => {
             name:name
         }
         //add new review on database
-                fetch('https://arcane-inlet-91838.herokuapp.com/review', {
+                fetch('http://localhost:5000/review', {
                     method: "POST",
                     headers: {
                     'content-type': "application/json",

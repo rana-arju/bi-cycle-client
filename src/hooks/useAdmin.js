@@ -7,7 +7,7 @@ const useAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://arcane-inlet-91838.herokuapp.com/admin/${email}`,{
+            fetch(`http://localhost:5000/admin/${email}`,{
                 methodd: "GET",
                 headers: {
                     'content-type': 'application/json',
