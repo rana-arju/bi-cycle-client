@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [orders, setOrder] = useState([]);
     useEffect(() => {
         if (user) {
-        fetch(`http://localhost:5000/order`, {
+        fetch(`https://arcane-inlet-91838.herokuapp.com/order`, {
           method: "GET",
           headers: {
             'content-type': 'application/json',
