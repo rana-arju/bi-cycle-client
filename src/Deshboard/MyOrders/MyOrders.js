@@ -58,7 +58,7 @@ const MyOrders = () => {
                         <td>$ {parseInt(order.productPrice) * parseInt(order.quentity)}
                         </td>
                         <td>{
-                            !order.paid ?  <NavLink to="/" className="btn btn-secondary btn-sm">Pay</NavLink> :  <button className="btn btn-secondary btn-sm">Panding</button>
+                            !order.paid ?  <NavLink to={`/deshboard/payment/${order._id}`} className="btn btn-secondary btn-sm">Pay</NavLink> :  <button className="btn btn-secondary btn-sm">Panding</button>
                             }
                        
                         </td>

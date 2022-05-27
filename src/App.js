@@ -14,6 +14,7 @@ import Update from "./Deshboard/Profile/Update";
 import Deshboard from "./Deshboard/Deshboard";
 import AddReview from "./Deshboard/AddReview/AddReview";
 import MyOrders from "./Deshboard/MyOrders/MyOrders";
+import Payment from "./Deshboard/Payment/Payment";
 import MakeAdmin from "./Deshboard/MakeAdmin/MakeAdmin";
 import ManageOrders from "./Deshboard/ManageOrders/ManageOrders";
 import Purchase from "./Shared/Purchase/Purchase";
@@ -46,6 +47,7 @@ function App() {
             <Route path="update" element={<Update />} />
             <Route path="review" element={<AddReview />} />
             <Route path="orders" element={<MyOrders />} />
+            <Route path="payment/:id" element={<Payment />} />
             <Route path="manageproduct" element={<ManageProducts />} />
             <Route path="manageorders" element={<ManageOrders />} />
             <Route path="makeadmin" element={<RequireAdmin>

@@ -27,8 +27,8 @@ const DeleteOrder = ({deletingOrder, refetch, setDeletingOrder}) => {
                 <h3 className="font-bold text-lg">Are You Sure?</h3>
                 <p className="py-4 text-red-500">You Want To Cencle {productName}</p>
                 <div className="modal-action">
-                <button className="btn btn-error text-white " onClick={() => handleDelete()}>Delete</button>
-                <label htmlFor="handleDelete" className="btn">Cencle</label>
+                <button className="btn btn-error text-white " onClick={() => handleDelete()}>Yes</button>
+                <label htmlFor="handleDelete" className="btn">No</label>
                 </div>
             </div>
             </div>
