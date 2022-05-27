@@ -1,14 +1,15 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const User = ({user, refetch, index}) => {
+const User = ({user, refetch, index, setDeletingAdmin}) => {
         const {email, role} = user;
         const makeAdmin = () => {
         const {email }= user;
-        fetch(`https://arcane-inlet-91838.herokuapp.com/user/admin/${email}`, {
+        fetch(`http://localhost:5000/user/admin/${email}`, {
             method: "PUT",
             headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
             },
         })
         .then(res => {
@@ -34,8 +35,12 @@ const User = ({user, refetch, index}) => {
                     }
               </td>
                <td>
-               <button className="btn btn-xs btn-error">Remove User</button>
-               </td>
+                   {
+                       role ? <label  onClick={() => setDeletingAdmin(user)} htmlFor="handleDelete" className="btn btn-error text-white  " >Remove</label> :
+                       <label  className="btn btn-error text-white" disabled>Remove</label>
+                   }
+                
+                </td>
                         
           </tr>
     );

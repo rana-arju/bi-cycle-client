@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [orders, setOrder] = useState([]);
     useEffect(() => {
         if (user) {
-        fetch(`https://arcane-inlet-91838.herokuapp.com/order`, {
+        fetch(`http://localhost:5000/order`, {
           method: "GET",
           headers: {
             'content-type': 'application/json',
@@ -21,7 +21,7 @@ const MyOrders = () => {
         .then(data => setOrder(data))
         }
 
-    },[])
+    },[user])
     console.log(orders);
     return (
         <div>
@@ -33,13 +33,16 @@ const MyOrders = () => {
                     <th>Product Img</th>
                     <th>Product Name</th>
                     <th>Price</th>
-                    <th>Paid</th>
-                    <th>Cencle</th>
+                    <th>email</th>
+                    <th>Quentity</th>
+                    <th>Payment</th>
+                    <th>Delete</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
                     {
-                        orders?.map(order =>  <tr key={order._id}>
+                        orders && orders?.map(order =>  <tr key={order._id}>
                         <td>
                         <div className="flex items-center space-x-3">
                             <div className="avatar">
@@ -53,8 +56,13 @@ const MyOrders = () => {
                             {order.productName}
                         </td>
                         <td>$ {order.productPrice}</td>
+                        <td> {order.email}</td>
+                        <td> {order.quentity}</td>
                         <th>
-                        <button className="btn btn-ghost btn-xs">details</button>
+                        <button className="btn btn-ghost btn-xs">Paid</button>
+                        </th>
+                        <th>
+                        <button className="btn btn-ghost btn-xs uppercase">Delete</button>
                         </th>
                     </tr>
                 )

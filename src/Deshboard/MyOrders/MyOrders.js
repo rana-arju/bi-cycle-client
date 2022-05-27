@@ -7,17 +7,17 @@ const MyOrders = () => {
         //All Produts Show
     const [orders, setOrder] = useState([]);
     useEffect(() => {
-        if (user) {
-        fetch(`https://arcane-inlet-91838.herokuapp.com/order/${user.email}`, {
+       
+        fetch(`http://localhost:5000/order/${user.email}`, {
           method: "GET",
           headers: {
             'content-type': 'application/json',
-          },
+          }
         }
         )
         .then(res => res.json())
-        .then(data => console.log(data))
-        }
+        .then(data => setOrder(data))
+        
 
     },[user])
    
@@ -36,27 +36,28 @@ const MyOrders = () => {
                 </tr>
                 </thead>
                 <tbody>
-                   
-                        <tr>
-
+                    {
+                        orders.map(order => <tr key={order._id}>
                         <td>
                         <div className="flex items-center space-x-3">
                             <div className="avatar">
                             <div className="rounded-lg w-24 h-24">
-                                <img src={orders.productImg} alt={orders.productName} />
+                                <img src={order.productImg} alt={order.productName} />
                             </div>
                             </div>
                         </div>
                         </td>
                         <td>
-                            {orders.productName}
+                            {order.productName}
                         </td>
-                        <td>$ {orders.productPrice}</td>
+                        <td>$ {order.productPrice}</td>
                         <th>
                         <button className="btn btn-ghost btn-xs">details</button>
                         </th>
-                    </tr>
-                ) 
+                    </tr>)
+                    }
+                      
+                 
                    
                
     

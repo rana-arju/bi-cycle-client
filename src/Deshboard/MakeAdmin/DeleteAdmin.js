@@ -1,22 +1,21 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const DeleteModal = ({deletingProduct, refetch, setDeletingProduct}) => {
-    const {name, _id:id} = deletingProduct;
+const DeleteAdmin = ({deletingAdmin, refetch, setDeletingAdmin}) => {
+    const {name, email} = deletingAdmin;
        const handleDelete = () => {
-       fetch(`http://localhost:5000/products/${id}`, {
-           method: "DELETE",
+       fetch(`http://localhost:5000/admin/${email}`, {
+           method: "PUT",
            headers: {
+            'content-type': 'application/json',
            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
            }
        })
        .then(res => res.json())
        .then(data => {
-           if (data.deletedCount) {
-               setDeletingProduct(null)
-               refetch();
-               toast.success('One Product Delete Successfully!');
-           }
+            setDeletingAdmin(null)
+            refetch();
+            toast.success('Admin Remove Successfully!');
        })
     }
     return (
@@ -26,10 +25,9 @@ const DeleteModal = ({deletingProduct, refetch, setDeletingProduct}) => {
             <div className="modal modal-bottom sm:modal-middle">
             <div className="modal-box">
                 <h3 className="font-bold text-lg">Are You Sure?</h3>
-                <p className="py-4 text-red-500">You Want To Delete {name}</p>
+                <p className="py-4 text-red-500">You Want To Remove {name}</p>
                 <div className="modal-action">
-                <button className="btn btn-error text-white " onClick={() => handleDelete()}>Remove</button>
-
+                <button className="btn btn-error text-white " onClick={() => handleDelete()}>Delete</button>
                 <label htmlFor="handleDelete" className="btn">Cencle</label>
                 </div>
             </div>
@@ -38,4 +36,4 @@ const DeleteModal = ({deletingProduct, refetch, setDeletingProduct}) => {
     );
 };
 
-export default DeleteModal;
+export default DeleteAdmin;
