@@ -32,7 +32,7 @@ const MyOrders = () => {
                 <tr>
                     <th>Product Img</th>
                     <th>Product Name</th>
-                    <th>Price</th>
+                    <th>Total Price</th>
                     <th>email</th>
                     <th>Quentity</th>
                     <th>Payment</th>
@@ -55,7 +55,7 @@ const MyOrders = () => {
                         <td>
                             {order.productName}
                         </td>
-                        <td>$ {order.productPrice}</td>
+                        <td>$ {parseInt(order.productPrice) * parseInt(order.quentity)}</td>
                         <td> {order.email}</td>
                         <td> {order.quentity}</td>
                         <th>

@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const User = ({user, refetch, index, setDeletingAdmin}) => {
-        const {email, role} = user;
+        const {email,name, role} = user;
         const makeAdmin = () => {
         const {email }= user;
         fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -28,6 +28,7 @@ const User = ({user, refetch, index, setDeletingAdmin}) => {
     return (
             <tr>
                <th>{index + 1}</th>
+                <td>{name}</td>
                 <td>{email}</td>
                  <td>
                    {

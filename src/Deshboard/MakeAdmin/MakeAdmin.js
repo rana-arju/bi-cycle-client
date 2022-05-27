@@ -29,8 +29,9 @@ const MakeAdmin = () => {
             <thead>
             <tr>
                 <th>SL</th>
+                <th>Name</th>
                 <th>Email</th>
-                <th>Make</th>
+                <th>Role</th>
                 <th>Action</th>
                 </tr>
                 </thead>
