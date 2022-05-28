@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteAdmin = ({deletingAdmin, refetch, setDeletingAdmin}) => {
     const {name, email} = deletingAdmin;
        const handleDelete = () => {
-       fetch(`https://arcane-inlet-91838.herokuapp.com/admin/${email}`, {
+       fetch(`http://localhost:5000/admin/${email}`, {
            method: "PUT",
            headers: {
             'content-type': 'application/json',

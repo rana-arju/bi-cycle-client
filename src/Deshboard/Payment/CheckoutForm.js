@@ -11,7 +11,7 @@ const CheckoutForm = ({product}) => {
       const [clientSecret, setClientSecret] = useState("");
       const [transactionId, setTransactionId] = useState("");
       useEffect(() => {
-      fetch("https://arcane-inlet-91838.herokuapp.com/create-payment-intent", {
+      fetch("http://localhost:5000/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,10 +65,10 @@ const CheckoutForm = ({product}) => {
     setTransactionId(paymentIntent.id);
     setCardSuccess('Your Payment is Complated');
     const payment = {
-      appointment: id,
+      order: id,
       transactionId: paymentIntent.id,
     }
-    fetch(`https://arcane-inlet-91838.herokuapp.com/order/${id}`, {
+    fetch(`http://localhost:5000/order/${id}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json",

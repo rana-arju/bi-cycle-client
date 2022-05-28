@@ -1,28 +1,31 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
+import DeleteOrder from '../MyOrders/DeleteOrder';
 
 const MyOrders = () => {
-    const [user] = useAuthState(auth)
         //All Produts Show
+    const [deletingOrder, setDeletingOrder] = useState(null);
 
-    const [orders, setOrder] = useState([]);
-    useEffect(() => {
-        if (user) {
-        fetch(`https://arcane-inlet-91838.herokuapp.com/order`, {
-          method: "GET",
+  const { isLoading, error, data:orders, refetch} = useQuery('orders', () =>
+     fetch(`http://localhost:5000/order`, {
+         method: "GET",
           headers: {
-            'content-type': 'application/json',
-            authorization: `Bearer ${localStorage.getItem('accessToken')}`
-          },
-        }
-        )
-        .then(res => res.json())
-        .then(data => setOrder(data))
-        }
-
-    },[user])
+            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+          }
+     }).then(res =>res.json())
+   )
+     if(isLoading){
+        return <Loading />
+    }
+    if(error){
+        return toast.error(error.message);
+    }
     console.log(orders);
+
     return (
         <div>
             <h2 className='text-center text-xl  md:text-3xl uppercase text-primary font-bold mb-5'>my orders</h2>
@@ -61,9 +64,14 @@ const MyOrders = () => {
                         <th>
                         <button className="btn btn-ghost btn-xs">Paid</button>
                         </th>
-                        <th>
-                        <button className="btn btn-ghost btn-xs uppercase">Delete</button>
-                        </th>
+                          <td>
+                            {
+                            !order.paid ? <label  onClick={() => setDeletingOrder(order)} htmlFor="handleDelete" className="btn btn-error text-white " >Cencle</label> :
+                            <label  className="btn btn-error text-white" disabled>Cencle</label>
+                   
+                            }
+                        
+                        </td>
                     </tr>
                 )
                     }
@@ -72,6 +80,7 @@ const MyOrders = () => {
                 </tbody>
             </table>
             </div>
+            {deletingOrder && <DeleteOrder setDeletingOrder={setDeletingOrder} deletingOrder={deletingOrder}  refetch ={refetch} />}
         </div>
     );
 };

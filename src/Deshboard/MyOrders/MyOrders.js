@@ -13,7 +13,7 @@ const MyOrders = () => {
         //All Produts Show
 
     const { isLoading, error, data:orders, refetch} = useQuery('orders', () =>
-     fetch(`https://arcane-inlet-91838.herokuapp.com/order/${user.email}`, {
+     fetch(`http://localhost:5000/order/${user.email}`, {
          method: "GET",
           headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
