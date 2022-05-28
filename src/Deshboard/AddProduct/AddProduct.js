@@ -52,8 +52,8 @@ const AddProduct = () => {
         })
     }
     return (
-    <div className='container flex h-full  justify-center items-center md:my-24'>
-            <div className="card w-full md:w-10/12 bg-base-100 shadow-xl">
+    <div className='container flex max-h-full justify-center items-center md:my-24'>
+            <div className="card w-full  md:w-10/12 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">Add New Product</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>

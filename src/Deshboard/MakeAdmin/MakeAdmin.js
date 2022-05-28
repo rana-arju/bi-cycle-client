@@ -11,6 +11,7 @@ const MakeAdmin = () => {
      fetch(`https://arcane-inlet-91838.herokuapp.com/user`, {
          method: "GET",
           headers: {
+            'content-type': 'application/json',
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
           }
      }).then(res =>res.json())
@@ -21,6 +22,7 @@ const MakeAdmin = () => {
     if(error){
         return toast.error(error.message);
     }
+    console.log(users);
     return (
     <div>
         <h2>Total Users: {users.length}</h2>

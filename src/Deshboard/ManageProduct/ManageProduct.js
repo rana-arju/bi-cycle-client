@@ -1,5 +1,4 @@
 import React from 'react';
-import { toast } from 'react-toastify';
 
 const ManageProduct = ({product, refetch, setDeletingProduct}) => {
     const {name, _id:id, description, images, stock,minorder, price}= product;

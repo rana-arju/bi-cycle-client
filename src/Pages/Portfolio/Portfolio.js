@@ -2,7 +2,6 @@ import React from 'react';
 import {  DiJavascript,DiReact, DiMongodb, DiHtml5, DiCss3,DiBootstrap, DiWordpress,DiGit, DiFirebase,DiHeroku } from 'react-icons/di';
 import { BsGithub } from 'react-icons/bs';
 import { SiNetlify } from 'react-icons/si';
-
 const Portfolio = () => {
     return (
         <div>
@@ -14,7 +13,6 @@ const Portfolio = () => {
                 <div className="card-body md:w-1/2">
                    <div className="overflow-x-auto">
                     <table className="table table-zebra w-full">
-                       
                         <tbody>
                         <tr>
                             <td>Name: </td>
@@ -26,7 +24,6 @@ const Portfolio = () => {
                         </tr>
                         <tr>
                             <td className='text-center text-secondary font-bold'>Educational Background</td>
-                            
                         </tr>
                         <tr>
                             <td>Education: </td>
@@ -40,8 +37,6 @@ const Portfolio = () => {
                             <td>Semester: </td>
                             <td>5th</td>
                         </tr>
-
-                  
                         </tbody>
                     </table>
                     </div>
@@ -51,7 +46,6 @@ const Portfolio = () => {
                 {/* i have know technology as a web developer */}
                 <div className='container mx-auto w-full md:w-1/2 grid justify-center content-center  items-center'>
                     <h1 className='text-xl sm:text-2xl md:text-4xl text-center uppercase text-secondary font-bold '>skills</h1>
-                
                 <div >
                     <div className="card w-full md:w-10/12 bg-base-100 shadow-xl">
                     <div className="card-body grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -130,13 +124,12 @@ const Portfolio = () => {
                     </div>
                     </div>
                 </div>
-            
             </div>
             <div>
                 <h2 className="text-xl sm:text-2xl md:text-4xl uppercase text-center text-secondary my-10">My recent Project</h2>
-                <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3'>
-                    <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://i.ibb.co/1fVqpSn/logika-full-view-1-1.png" className='h-full w-[400px]' alt="Shoes" /></figure>
+                <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+                    <div className="card card-compact w-full md:w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://i.ibb.co/1fVqpSn/logika-full-view-1-1.png" className='h-full w-[400px]' alt="Logisco" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Logisco</h2>
                          <div className="card-actions justify-end">
@@ -152,8 +145,8 @@ const Portfolio = () => {
                     </div>
                     </div>
                     {/* project 2 */}
-                    <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://i.ibb.co/7yDmsHS/business-1-1.png" className='h-full w-[400px]' alt="Shoes" /></figure>
+                    <div className="card card-compact w-full md:w-96  bg-base-100 shadow-xl">
+                    <figure><img src="https://i.ibb.co/7yDmsHS/business-1-1.png" className='h-full w-[400px]' alt="Business one page" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Business one page</h2>
                          <div className="card-actions justify-end">
@@ -168,8 +161,8 @@ const Portfolio = () => {
                     </div>
                     </div>
                     {/* project 3 */}
-                    <div className="card card-compact w-96 bg-base-100 shadow-xl">
-                    <figure><img src="https://i.ibb.co/J3TCQkw/screencapture-rana-arju-github-io-css-ecommerces-2022-05-25-15-58-59-1-1-1.png" className='h-full w-[400px]' alt="Shoes" /></figure>
+                    <div className="card card-compact w-full md:w-96 bg-base-100 shadow-xl">
+                    <figure><img src="https://i.ibb.co/J3TCQkw/screencapture-rana-arju-github-io-css-ecommerces-2022-05-25-15-58-59-1-1-1.png" className='h-full w-[400px]' alt="Business one page" /></figure>
                     <div className="card-body">
                         <h2 className="card-title">Business one page</h2>
                          <div className="card-actions justify-end">
@@ -186,7 +179,6 @@ const Portfolio = () => {
                 </div>
             </div>
             </div>
-      
     );
 };
 

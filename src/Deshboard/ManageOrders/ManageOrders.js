@@ -24,7 +24,6 @@ const MyOrders = () => {
     if(error){
         return toast.error(error.message);
     }
-    console.log(orders);
 
     return (
         <div>
@@ -56,7 +55,7 @@ const MyOrders = () => {
                         </div>
                         </td>
                         <td>
-                            {order.productName}
+                            {order.productName.slice(0,30) + "..."}
                         </td>
                         <td>$ {parseInt(order.productPrice) * parseInt(order.quentity)}</td>
                         <td> {order.email}</td>

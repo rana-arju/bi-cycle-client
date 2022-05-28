@@ -12,7 +12,6 @@ const useAdmin = user => {
                 headers: {
                     'content-type': 'application/json',
                    
-
                 }
 
             })
