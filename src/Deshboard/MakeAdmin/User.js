@@ -5,7 +5,7 @@ const User = ({user, refetch, index, setDeletingAdmin}) => {
         const {email,name, role} = user;
         const makeAdmin = () => {
         const {email }= user;
-        fetch(`http://localhost:5000/user/admin/${email}`, {
+        fetch(`https://arcane-inlet-91838.herokuapp.com/user/admin/${email}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',

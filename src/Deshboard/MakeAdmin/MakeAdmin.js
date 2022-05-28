@@ -8,7 +8,7 @@ import User from './User';
 const MakeAdmin = () => {
     const [deletingAdmin, setDeletingAdmin] = useState(null);
     const { isLoading, error, data:users, refetch} = useQuery('users', () =>
-     fetch(`http://localhost:5000/user`, {
+     fetch(`https://arcane-inlet-91838.herokuapp.com/user`, {
          method: "GET",
           headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

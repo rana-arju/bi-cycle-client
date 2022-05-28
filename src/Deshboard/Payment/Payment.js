@@ -9,7 +9,7 @@ const stripePromise = loadStripe('pk_test_51L19G4DL7GXo3RyjkaAQ65hkhUGgnm3ePYitn
 const Payment = () => {
     const {id} = useParams();
     
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://arcane-inlet-91838.herokuapp.com/order/${id}`;
     const {data:product, isLoading} = useQuery(['product',id], () => fetch(url).then(res => res.json()));
     if (isLoading) {
         return <Loading />
