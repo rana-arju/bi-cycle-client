@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
+import PageTitle from '../../Shared/PageTitle/PageTitle'
 const AddProduct = () => {
     const { register, formState: { errors }, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
@@ -53,6 +54,8 @@ const AddProduct = () => {
     }
     return (
     <div className='container flex max-h-full justify-center items-center md:my-24'>
+        		<PageTitle title="Manage Order" />
+
             <div className="card w-full  md:w-10/12 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">Add New Product</h2>

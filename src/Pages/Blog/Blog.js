@@ -1,8 +1,10 @@
 import React from 'react';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Blog = () => {
     return (
         <div className="container mx-auto px-2 md:px-24">
+            <PageTitle title="Blog" />
             <h1 className="text-4xl text-center my-5 uppercase">Our Blogs</h1>
             <div className='my-10'>
                 <h2 className='text-2xl md:font-bold'> 1) How will you improve the performance of a React Application?</h2>

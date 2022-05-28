@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const AddReviws = () => {
     const { register, formState: { errors }, handleSubmit} = useForm();
     const [user] = useAuthState(auth);
@@ -34,6 +35,8 @@ const AddReviws = () => {
     }
     return (
   <div className='container flex h-full  md:my-32'>
+      		<PageTitle title="Add Review" />
+
             <div className="card w-full md:w-10/12 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">Add New Review</h2>

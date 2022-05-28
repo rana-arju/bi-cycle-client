@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
-
+import PageTitle from "../../Shared/PageTitle/PageTitle";
 const Profile = () => {
         const [user] = useAuthState(auth);
         const [users, setUser] = useState([]);
@@ -22,6 +22,7 @@ const Profile = () => {
         },[user]);
     return (
           <div className='container flex h-full  justify-center items-center md:my-24'>
+            <PageTitle title="Profile" />
             <div className="card w-full md:w-3/5 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">My Profile</h2>

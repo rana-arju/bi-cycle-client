@@ -1,6 +1,5 @@
 import { Routes, Route} from "react-router-dom";
 import Home from "./Pages/Home/Home";
-import Contact from "./Pages/Contact/Contact";
 import NotFound from "./Pages/NotFound/NotFound";
 import Login from './Pages/Access/Login';
 import Registation from './Pages/Access/Registation';
@@ -33,7 +32,6 @@ function App() {
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/login' element={<Login />} />
           <Route path='/registation' element={<Registation />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="/update" element={<Update />} />
           <Route path="/purchase/:id" element={<RequireAuth>
             <Purchase />

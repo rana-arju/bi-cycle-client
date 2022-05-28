@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import DeleteModal from '../../Shared/DeleteModal/DeleteModal';
 import Loading from '../../Shared/Loading/Loading';
 import ManageProduct from './ManageProduct';
-
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
      //All Produts Show
@@ -25,6 +25,8 @@ const ManageProducts = () => {
     }
     return (
         <div className='container px-2 mx-auto my-12'>
+            		<PageTitle title="Manage Products" />
+
              <h2 className='uppercase text-center text-xl sm:text-2xl md:text-4xl my-5'>All Products</h2>
         <div className=' grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
            

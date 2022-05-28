@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import DeleteOrder from '../MyOrders/DeleteOrder';
-
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const MyOrders = () => {
         //All Produts Show
     const [deletingOrder, setDeletingOrder] = useState(null);
@@ -27,6 +27,8 @@ const MyOrders = () => {
 
     return (
         <div>
+		<PageTitle title="Not Found" />
+
             <h2 className='text-center text-xl  md:text-3xl uppercase text-primary font-bold mb-5'>my orders</h2>
             <div className="overflow-x-auto w-full">
             <table className="table w-full">

@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import useToken from '../../hooks/useToken';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 
 const Registation = () => {
     const navigate = useNavigate();
@@ -42,6 +43,7 @@ const onSubmit = async(event) => {
 };
     return (
         <div className='container flex h-1/2 md:h-screen justify-center items-center'>
+            <PageTitle title="Registation" />
             <div className="card w-full md:w-2/5 bg-base-100 shadow-xl">
             <div className="card-body">
                 <p className='mb-5'>{RegErrror}</p>

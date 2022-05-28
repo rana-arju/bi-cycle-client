@@ -7,7 +7,7 @@ import auth from '../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
 import useToken from '../../hooks/useToken';
-
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -41,6 +41,7 @@ if (token) {
 
     return (
         <div className='container flex h-1/2 md:h-screen justify-center items-center'>
+            <PageTitle title="Login" />
             <div className="card w-full md:w-2/5 bg-base-100 shadow-xl">
             <div className="card-body">
                 <h2 className="text-center text-xl font-bold mb-5">Please Login</h2>

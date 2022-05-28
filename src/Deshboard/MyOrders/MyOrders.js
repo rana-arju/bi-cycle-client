@@ -6,7 +6,7 @@ import DeleteOrder from './DeleteOrder';
 import { useQuery } from 'react-query';
 import Loading from '../../Shared/Loading/Loading';
 import { toast } from 'react-toastify';
-
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const MyOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState(null);
     const [user] = useAuthState(auth);
@@ -28,6 +28,8 @@ const MyOrders = () => {
     }
     return (
         <div>
+            <PageTitle title="My Order" />
+
             <h2 className='text-center text-xl  md:text-3xl uppercase text-primary font-bold mb-5'>my orders</h2>
             <div className="overflow-x-auto w-full">
             <table className="table w-full">

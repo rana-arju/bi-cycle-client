@@ -2,9 +2,11 @@ import React from 'react';
 import {  DiJavascript,DiReact, DiMongodb, DiHtml5, DiCss3,DiBootstrap, DiWordpress,DiGit, DiFirebase,DiHeroku } from 'react-icons/di';
 import { BsGithub } from 'react-icons/bs';
 import { SiNetlify } from 'react-icons/si';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 const Portfolio = () => {
     return (
         <div>
+            <PageTitle title="Portfolio" />
             <h2 className='text-center text-xl sm:text-2xl md:text-4xl text-secondary my-5 uppercase'>About Me</h2>
             {/* About Me Section */}
             <div className='container mx-auto mb-10'>

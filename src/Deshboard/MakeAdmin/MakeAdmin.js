@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import { toast } from 'react-toastify';
 import Loading from '../../Shared/Loading/Loading';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import DeleteAdmin from './DeleteAdmin';
 import User from './User';
 
@@ -25,6 +26,8 @@ const MakeAdmin = () => {
     console.log(users);
     return (
     <div>
+        <PageTitle title="Make Admin" />
+
         <h2>Total Users: {users.length}</h2>
         <div className="overflow-x-auto">
          <table className="table w-full">
