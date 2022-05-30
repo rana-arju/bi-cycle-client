@@ -4,7 +4,7 @@
 
 ## Live Preview 2: https://bicycle-2a227.firebaseapp.com/
 
-![Bi-cycle full Vew Image](https://i.ibb.co/pZbGtM6/full-view.png)
+![Bi-cycle full Vew Image]([https://i.ibb.co/pZbGtM6/full-view.png](https://ibb.co/Qj1YQvf))
 
 # Uses Technology - MERN STACK PROJECT
 
