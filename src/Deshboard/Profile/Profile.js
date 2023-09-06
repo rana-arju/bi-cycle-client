@@ -8,7 +8,7 @@ const Profile = () => {
         const [users, setUser] = useState([]);
         useEffect(() => {
             const email = user?.email;
-            fetch(`https://bi-cycle-server.vercel.app/user/${email}`, {
+            fetch(`https://by-cycle.onrender.com/user/${email}`, {
                 method: "GET", 
                 headers: {
                     'content-type': 'application/json'

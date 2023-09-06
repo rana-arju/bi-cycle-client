@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const Reviws = () => {
     const [reviews, setReview] = useState([]);
       useEffect(()=>{
-        fetch('https://bi-cycle-server.vercel.app/review')
+        fetch('https://by-cycle.onrender.com/review')
         .then(res => res.json())
         .then(data => setReview(data))
     },[]);

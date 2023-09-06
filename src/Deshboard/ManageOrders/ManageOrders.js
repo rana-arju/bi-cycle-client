@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState(null);
 
   const { isLoading, error, data:orders, refetch} = useQuery('orders', () =>
-     fetch(`https://bi-cycle-server.vercel.app/order`, {
+     fetch(`https://by-cycle.onrender.com/order`, {
          method: "GET",
           headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

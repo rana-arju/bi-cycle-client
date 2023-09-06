@@ -9,7 +9,7 @@ const stripePromise = loadStripe('pk_test_51L19G4DL7GXo3RyjkaAQ65hkhUGgnm3ePYitn
 const Payment = () => {
     const {id} = useParams();
     
-    const url = `https://bi-cycle-server.vercel.app/order/${id}`;
+    const url = `https://by-cycle.onrender.com/order/${id}`;
     const {data:product, isLoading} = useQuery(['product',id], () => fetch(url).then(res => res.json()));
     if (isLoading) {
         return <Loading />

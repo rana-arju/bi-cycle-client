@@ -36,7 +36,7 @@ const Update = () => {
                     github: data.github
                 }
                 //send fata on database
-                fetch(`https://bi-cycle-server.vercel.app/user/${email}`, {
+                fetch(`https://by-cycle.onrender.com/user/${email}`, {
                     method: "PUT",
                     headers: {
                     'content-type': "application/json",

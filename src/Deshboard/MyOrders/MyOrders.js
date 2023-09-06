@@ -13,7 +13,7 @@ const MyOrders = () => {
         //All Produts Show
 
     const { isLoading, error, data:orders, refetch} = useQuery('orders', () =>
-     fetch(`https://bi-cycle-server.vercel.app/order/${user.email}`, {
+     fetch(`https://by-cycle.onrender.com/order/${user.email}`, {
          method: "GET",
           headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`

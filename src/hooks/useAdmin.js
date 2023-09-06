@@ -7,7 +7,7 @@ const useAdmin = user => {
     useEffect(() => {
         const email = user?.email;
         if (email) {
-            fetch(`https://bi-cycle-server.vercel.app/admin/${email}`,{
+            fetch(`https://by-cycle.onrender.com/admin/${email}`,{
                 methodd: "GET",
                 headers: {
                     'content-type': 'application/json',

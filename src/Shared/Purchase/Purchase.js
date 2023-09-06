@@ -14,7 +14,7 @@ const Purchase = () => {
 
     useEffect(() =>{
         setTimeout(async() => {
-            const res = await fetch(`https://bi-cycle-server.vercel.app/products/${id}`);
+            const res = await fetch(`https://by-cycle.onrender.com/products/${id}`);
             const data = await res.json();
             setProduct(data);
         },2000);
@@ -36,7 +36,7 @@ const Purchase = () => {
             email:email,
             name:name
         }
-           fetch('https://bi-cycle-server.vercel.app/order',{
+           fetch('https://by-cycle.onrender.com/order',{
             method: "POST",
             headers: {
                 'content-type' : 'application/json',

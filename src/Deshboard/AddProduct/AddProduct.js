@@ -36,7 +36,7 @@ const AddProduct = () => {
                     price: data.price
                 }
                 //send new product on database
-                fetch('https://bi-cycle-server.vercel.app/products', {
+                fetch('https://by-cycle.onrender.com/products', {
                     method: "POST",
                     headers: {
                     'content-type': "application/json",

@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteOrder = ({deletingOrder, refetch, setDeletingOrder}) => {
     const {productName, _id:id} = deletingOrder;
        const handleDelete = () => {
-       fetch(`https://bi-cycle-server.vercel.app/order/${id}`, {
+       fetch(`https://by-cycle.onrender.com/order/${id}`, {
            method: "DELETE",
            headers: {
             'content-type': 'application/json',

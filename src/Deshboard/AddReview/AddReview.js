@@ -18,7 +18,7 @@ const AddReviws = () => {
             name:name
         }
         //add new review on database
-                fetch('https://bi-cycle-server.vercel.app/review', {
+                fetch('https://by-cycle.onrender.com/review', {
                     method: "POST",
                     headers: {
                     'content-type': "application/json",

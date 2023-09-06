@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
      //All Produts Show
       const { isLoading, error, data:products, refetch} = useQuery('products', () =>
-     fetch(`https://bi-cycle-server.vercel.app/allproducts`, {
+     fetch(`https://by-cycle.onrender.com/allproducts`, {
          method: "GET",
           headers: {
 

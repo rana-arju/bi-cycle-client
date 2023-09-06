@@ -11,7 +11,7 @@ const CheckoutForm = ({product}) => {
       const [clientSecret, setClientSecret] = useState("");
       const [transactionId, setTransactionId] = useState("");
       useEffect(() => {
-      fetch("https://bi-cycle-server.vercel.app/create-payment-intent", {
+      fetch("https://by-cycle.onrender.com/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const CheckoutForm = ({product}) => {
       order: id,
       transactionId: paymentIntent.id,
     }
-    fetch(`https://bi-cycle-server.vercel.app/order/${id}`, {
+    fetch(`https://by-cycle.onrender.com/order/${id}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json",

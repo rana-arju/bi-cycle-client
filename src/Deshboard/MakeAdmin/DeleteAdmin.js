@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteAdmin = ({deletingAdmin, refetch, setDeletingAdmin}) => {
     const {name, email} = deletingAdmin;
        const handleDelete = () => {
-       fetch(`https://bi-cycle-server.vercel.app/admin/${email}`, {
+       fetch(`https://by-cycle.onrender.com/admin/${email}`, {
            method: "PUT",
            headers: {
             'content-type': 'application/json',

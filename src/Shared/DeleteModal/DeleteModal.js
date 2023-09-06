@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 const DeleteModal = ({deletingProduct, refetch, setDeletingProduct}) => {
     const {name, _id:id} = deletingProduct;
        const handleDelete = () => {
-       fetch(`https://bi-cycle-server.vercel.app/products/${id}`, {
+       fetch(`https://by-cycle.onrender.com/products/${id}`, {
            method: "DELETE",
            headers: {
            'authorization': `Bearer ${localStorage.getItem('accessToken')}`

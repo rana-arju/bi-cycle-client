@@ -5,7 +5,7 @@ const User = ({user, refetch, index, setDeletingAdmin}) => {
         const {email,name, role} = user;
         const makeAdmin = () => {
         const {email }= user;
-        fetch(`https://bi-cycle-server.vercel.app/user/admin/${email}`, {
+        fetch(`https://by-cycle.onrender.com/user/admin/${email}`, {
             method: "PUT",
             headers: {
                 'content-type': 'application/json',
