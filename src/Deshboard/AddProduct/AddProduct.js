@@ -36,7 +36,7 @@ const AddProduct = () => {
                     price: data.price
                 }
                 //send new product on database
-                fetch('https://arcane-inlet-91838.herokuapp.com/products', {
+                fetch('https://bi-cycle-server.vercel.app/products', {
                     method: "POST",
                     headers: {
                     'content-type': "application/json",

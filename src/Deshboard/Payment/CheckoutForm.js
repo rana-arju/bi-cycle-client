@@ -11,7 +11,7 @@ const CheckoutForm = ({product}) => {
       const [clientSecret, setClientSecret] = useState("");
       const [transactionId, setTransactionId] = useState("");
       useEffect(() => {
-      fetch("https://arcane-inlet-91838.herokuapp.com/create-payment-intent", {
+      fetch("https://bi-cycle-server.vercel.app/create-payment-intent", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,7 +68,7 @@ const CheckoutForm = ({product}) => {
       order: id,
       transactionId: paymentIntent.id,
     }
-    fetch(`https://arcane-inlet-91838.herokuapp.com/order/${id}`, {
+    fetch(`https://bi-cycle-server.vercel.app/order/${id}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json",

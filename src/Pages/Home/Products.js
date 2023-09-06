@@ -5,7 +5,7 @@ const Products = () => {
      //six item show help of this api
     const [products, setproduct] = useState([]);
     useEffect(()=>{
-        fetch('https://arcane-inlet-91838.herokuapp.com/products')
+        fetch('https://bi-cycle-server.vercel.app/products')
         .then(res => res.json())
         .then(data => setproduct(data))
     },[]);

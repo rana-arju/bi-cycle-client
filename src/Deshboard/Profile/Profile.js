@@ -8,7 +8,7 @@ const Profile = () => {
         const [users, setUser] = useState([]);
         useEffect(() => {
             const email = user?.email;
-            fetch(`https://arcane-inlet-91838.herokuapp.com/user/${email}`, {
+            fetch(`https://bi-cycle-server.vercel.app/user/${email}`, {
                 method: "GET", 
                 headers: {
                     'content-type': 'application/json'

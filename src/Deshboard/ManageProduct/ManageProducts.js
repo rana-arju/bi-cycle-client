@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
      //All Produts Show
       const { isLoading, error, data:products, refetch} = useQuery('products', () =>
-     fetch(`https://arcane-inlet-91838.herokuapp.com/allproducts`, {
+     fetch(`https://bi-cycle-server.vercel.app/allproducts`, {
          method: "GET",
           headers: {
 

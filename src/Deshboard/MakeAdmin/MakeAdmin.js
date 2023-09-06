@@ -9,7 +9,7 @@ import User from './User';
 const MakeAdmin = () => {
     const [deletingAdmin, setDeletingAdmin] = useState(null);
     const { isLoading, error, data:users, refetch} = useQuery('users', () =>
-     fetch(`https://arcane-inlet-91838.herokuapp.com/user`, {
+     fetch(`https://bi-cycle-server.vercel.app/user`, {
          method: "GET",
           headers: {
             'content-type': 'application/json',

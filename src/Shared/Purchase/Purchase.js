@@ -14,7 +14,7 @@ const Purchase = () => {
 
     useEffect(() =>{
         setTimeout(async() => {
-            const res = await fetch(`https://arcane-inlet-91838.herokuapp.com/products/${id}`);
+            const res = await fetch(`https://bi-cycle-server.vercel.app/products/${id}`);
             const data = await res.json();
             setProduct(data);
         },2000);
@@ -36,7 +36,7 @@ const Purchase = () => {
             email:email,
             name:name
         }
-           fetch('https://arcane-inlet-91838.herokuapp.com/order',{
+           fetch('https://bi-cycle-server.vercel.app/order',{
             method: "POST",
             headers: {
                 'content-type' : 'application/json',

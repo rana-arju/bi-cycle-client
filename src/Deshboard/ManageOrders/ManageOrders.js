@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [deletingOrder, setDeletingOrder] = useState(null);
 
   const { isLoading, error, data:orders, refetch} = useQuery('orders', () =>
-     fetch(`https://arcane-inlet-91838.herokuapp.com/order`, {
+     fetch(`https://bi-cycle-server.vercel.app/order`, {
          method: "GET",
           headers: {
             'authorization': `Bearer ${localStorage.getItem('accessToken')}`
